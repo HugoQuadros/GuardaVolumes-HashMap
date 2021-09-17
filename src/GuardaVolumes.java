@@ -16,18 +16,18 @@ public class GuardaVolumes {
 
     public void mostrarPecas(){
         for(Integer chave : pecasGuardadas.keySet()){
-            System.out.println(chave + ": ");
-            List<Peca> pecas = pecasGuardadas.get(chave);
-            for(Peca pecaIndividual: pecas){
-                System.out.print("Marca: " + pecaIndividual.getMarca() + "; ");
-                System.out.println("Modelo: " + pecaIndividual.getModelo());
-            }
+            mostrarPecasEspecificas(chave);
             System.out.println("");
         }
     }
 
     public void mostrarPecasEspecificas(Integer numero){
-        System.out.println(numero + ": " + pecasGuardadas.get(numero));
+        System.out.println(numero + ": ");
+        List<Peca> pecasEspecificas = pecasGuardadas.get(numero);
+        for(Peca pecaIndividual: pecasEspecificas){
+            System.out.print("Marca: " + pecaIndividual.getMarca() + "; ");
+            System.out.println("Modelo: " + pecaIndividual.getModelo());
+        }
     }
 
     public void devolverPecas(Integer numero){

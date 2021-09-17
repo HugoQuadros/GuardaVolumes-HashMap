@@ -34,6 +34,8 @@ public class Main {
 
         guardaVolume.mostrarPecas();
 
+        guardaVolume.mostrarPecasEspecificas(codigo2);
+
         guardaVolume.devolverPecas(codigo);
 
     }
